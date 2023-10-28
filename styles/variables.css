@@ -45,5 +45,5 @@
 
   --emphesized-content-color: var(--primary-color);
   --emphesized-content-background-color: var(--accent-color);
-  --emphesized-content-font-weight: bold;
+  --emphesized-content-font-weight: normal;
 }

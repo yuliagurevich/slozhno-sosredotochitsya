@@ -3,16 +3,97 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: var(--font, sans-serif);
+  font-size: var(--font-size);
   line-height: var(--line-height);
   background-color: var(--background-color);
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.header__tagline {
+.header {
+  block-size: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 40px;
+  position: relative;
+}
+
+.decoration {
+  position: absolute;
+  color: var(--accent-color);
+  inset-inline-end: calc(10px + (25px - 9px)/2);
+  inset-block-start: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.decoration::before {
+  content: "rec";
+  text-transform: uppercase;
+  
+  
+}
+
+.decoration::after {
+  content: "";
+  display: block;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: #ff0070;
+  box-shadow: 0 0 4px 4px #ff0070;
+}
+
+.header__theme-menu {
+  align-self: end;
+  margin-block-start: 40px;
+  margin-block-end: 65px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  inline-size: 70px;
+  block-size: 26px;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  line-height: 1;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.content-container {
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+.content-container:not(:last-child) {
+  margin-block-end: 50px;
+}
+
+.tagline {
   color: var(--tagline-color);
-  text-shadow: 4px 4px 0px var(--tagline-shadow-color);
   font-size: var(--tagline-font-size);
-  line-height: 0.825;
   font-weight: var(--tagline-font-weight);
+}
+
+.header-tagline {
+  text-shadow: 4px 4px 0px var(--tagline-shadow-color);
+  line-height: 0.825;
 }
 
 .header-title {
@@ -20,6 +101,12 @@
   background-color: var(--header-title-background-color);
   font-size: var(--header-title-font-size);
   font-weight: var(--header-title-font-weight);
+  margin-block-start: 55px;
+  margin-block-end: 31px;
+}
+
+.header-title span {
+  display: block;
 }
 
 .content-title {
@@ -27,23 +114,78 @@
   background-color: var(--content-title-background-color);
   font-size: var(--content-title-font-size);
   font-weight: var(--content-title-font-weight);
+  margin-block-end: 20px;
 }
 
 .content-subtitle {
-  color: var( --content-subtitle-color);
+  color: var(--content-subtitle-color);
   background-color: var(--content-subtitle-background-color);
   font-size: var(--content-subtitle-font-size);
   font-weight: var(--content-subtitle-font-weight);
+  margin-block-end: 10px;
+}
+
+.content > .content-container:last-child > .content-subtitle {
+  margin-block-start: 50px;
 }
 
 .content-paragraph {
   color: var(--content-color);
   background-color: var(--content-background-color);
-
+  margin-block-end: 20px;
 }
 
 .emphesized {
   color: var(--emphesized-content-color);
   background-color: var(--emphesized-content-background-color);
   font-weight: var(--emphesized-content-font-weight);
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+}
+
+img {
+  display: block;
+  inline-size: 100%;
+}
+
+img:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+.footer {
+  block-size: 100vh;
+  margin-block-start: 40px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-tagline {
+  line-height: 0.957;
+  text-shadow: 2px 2px 0px var(--tagline-shadow-color);
+}
+
+.footer::before,
+.footer::after,
+.header::before,
+.header::after {
+  content: "";
+  display: block;
+  height: 25px;
+  width: 25px;
+}
+
+.footer::before,
+.header::before {
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  align-self: flex-end;
+}
+
+.footer::after,
+.header::after {
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  align-self: flex-start;
 }
