@@ -2,4 +2,48 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--font, sans-serif);
+  line-height: var(--line-height);
+  background-color: var(--background-color);
+}
+
+.header__tagline {
+  color: var(--tagline-color);
+  text-shadow: 4px 4px 0px var(--tagline-shadow-color);
+  font-size: var(--tagline-font-size);
+  line-height: 0.825;
+  font-weight: var(--tagline-font-weight);
+}
+
+.header-title {
+  color: var(--header-title-color);
+  background-color: var(--header-title-background-color);
+  font-size: var(--header-title-font-size);
+  font-weight: var(--header-title-font-weight);
+}
+
+.content-title {
+  color: var(--content-title-color);
+  background-color: var(--content-title-background-color);
+  font-size: var(--content-title-font-size);
+  font-weight: var(--content-title-font-weight);
+}
+
+.content-subtitle {
+  color: var( --content-subtitle-color);
+  background-color: var(--content-subtitle-background-color);
+  font-size: var(--content-subtitle-font-size);
+  font-weight: var(--content-subtitle-font-weight);
+}
+
+.content-paragraph {
+  color: var(--content-color);
+  background-color: var(--content-background-color);
+
+}
+
+.emphesized {
+  color: var(--emphesized-content-color);
+  background-color: var(--emphesized-content-background-color);
+  font-weight: var(--emphesized-content-font-weight);
 }
