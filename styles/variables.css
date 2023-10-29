@@ -7,14 +7,16 @@
   --primary-color: #000028;
   --secondary-color: #F1B2CE;
   --accent-color: #FF0070;
-  
+
   --font: 'IBM Plex mono';
   --font-size: 18px;
   --line-height: 1.3;
 
   --background-color: var(--primary-color);
+  --background-image: url(../images/cover-image-dark.png);
 
   --decoration-color: var(--accent-color);
+  --rec-decoration-visibility: flex;
 
   --tagline-color: #DB00FF;
   --tagline-shadow-color: var(--accent-color);
