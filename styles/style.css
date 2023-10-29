@@ -5,8 +5,6 @@
   font-family: var(--font, sans-serif);
   font-size: var(--font-size);
   line-height: var(--line-height);
-  background-color: var(--background-color);
-  background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,25 +16,24 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-block-end: 40px;
   position: relative;
 }
 
 .decoration {
   position: absolute;
-  color: var(--accent-color);
+  color: var(--decoration-color);
   inset-inline-end: calc(10px + (25px - 9px)/2);
   inset-block-start: 10px;
-  display: flex;
+  display: var(--rec-decoration-visibility);
   gap: 10px;
   align-items: center;
 }
 
 .decoration::before {
   content: "rec";
-  text-transform: uppercase;
-  
-  
+  text-transform: uppercase;  
 }
 
 .decoration::after {
@@ -45,8 +42,8 @@
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
-  background-color: #ff0070;
-  box-shadow: 0 0 4px 4px #ff0070;
+  background-color: var(--decoration-color);
+  box-shadow: 0 0 4px 4px var(--decoration-color);
 }
 
 .header__theme-menu {
@@ -67,13 +64,31 @@
   appearance: none;
   background-color: transparent;
   border: none;
-  color: var(--accent-color);
+  color: var(--button-text-color);
   text-transform: lowercase;
   line-height: 1;
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover-outline-color);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--button-focus-underline-color);
+}
+
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--button-active-border-color);
+}
+
+.header__theme-menu-button_active:hover {
+  border: 1px solid var(--button-active-border-color);
+  cursor: auto;
 }
 
 .content-container {
@@ -135,6 +150,24 @@
   margin-block-end: 20px;
 }
 
+.content-paragraph a {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--tagline-shadow-color);
+}
+
+.content-paragraph a:hover {
+  border-block-end: 1px solid var(--secondary-color);
+}
+
+.content-paragraph a:focus {
+  outline: none;
+}
+
+.content-paragraph a:focus-visible {
+  outline: 1px solid var(--secondary-color);
+  outline-offset: 0px;
+}
+
 .emphesized {
   color: var(--emphesized-content-color);
   background-color: var(--emphesized-content-background-color);
@@ -178,14 +211,14 @@ img:not(:last-child) {
 
 .footer::before,
 .header::before {
-  border-inline-end: 1px solid var(--accent-color);
-  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--decoration-color);
+  border-block-start: 1px solid var(--decoration-color);
   align-self: flex-end;
 }
 
 .footer::after,
 .header::after {
-  border-inline-start: 1px solid var(--accent-color);
-  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--decoration-color);
+  border-block-end: 1px solid var(--decoration-color);
   align-self: flex-start;
 }
