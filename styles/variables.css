@@ -21,7 +21,7 @@
   --tagline-color: #DB00FF;
   --tagline-shadow-color: var(--accent-color);
   --tagline-font: var(--font);
-  --tagline-font-size: 116px;
+  --tagline-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);;
   --tagline-font-weight: bold;
 
   --header-title-color: var(--background-color);
@@ -58,8 +58,8 @@
   --button-active-border-color: var(--accent-color);
 }
 
-@media (max-width: 1024px) {
+@media (width >= 768px) {
   :root {
-    --tagline-font-size: 120px;
+    --tagline-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }

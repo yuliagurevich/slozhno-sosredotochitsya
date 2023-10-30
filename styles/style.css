@@ -16,11 +16,11 @@
 .header {
   block-size: 100vh;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-block-end: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
   position: relative;
+  margin-block-end: 40px;
 }
 
 .decoration {
@@ -49,9 +49,8 @@
 }
 
 .header__theme-menu {
-  align-self: end;
-  margin-block-start: 40px;
-  margin-block-end: 65px;
+  justify-self: end;
+  align-self: center;
 }
 
 .header__theme-menu-list {
@@ -106,6 +105,7 @@
   color: var(--tagline-color);
   font-size: var(--tagline-font-size);
   font-weight: var(--tagline-font-weight);
+  align-self: center;
 }
 
 .header-tagline {
@@ -118,8 +118,7 @@
   background-color: var(--header-title-background-color);
   font-size: var(--header-title-font-size);
   font-weight: var(--header-title-font-weight);
-  margin-block-start: 55px;
-  margin-block-end: 31px;
+  align-self: center;
 }
 
 .header-title span {
@@ -193,13 +192,13 @@ img:not(:last-child) {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
 }
 
 .footer-tagline {
   line-height: 0.957;
   text-shadow: 2px 2px 0px var(--tagline-shadow-color);
-  align-self: center;
 }
 
 .footer::before,
@@ -208,6 +207,7 @@ img:not(:last-child) {
 .header::after {
   content: "";
   display: block;
+  position: absolute;
   height: 25px;
   width: 25px;
 }
@@ -216,14 +216,16 @@ img:not(:last-child) {
 .header::before {
   border-inline-end: 1px solid var(--decoration-color);
   border-block-start: 1px solid var(--decoration-color);
-  align-self: flex-end;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
 }
 
 .footer::after,
 .header::after {
   border-inline-start: 1px solid var(--decoration-color);
   border-block-end: 1px solid var(--decoration-color);
-  align-self: flex-start;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
 }
 
 @media (width >= 768px) {
@@ -237,20 +239,20 @@ img:not(:last-child) {
     inset-block-start: 20px;
   }
 
-  .tagline {
+  .header-tagline {
     margin-inline-start: -20px;
   }
 
   .header-title {
     inline-size: 50%;
-    align-self: flex-end;
+    justify-self: end;
   }
 
   .content-container {
     padding-inline-start: 20px;
     padding-inline-end: 20px;
   }
-  
+
   .content-container:not(:last-child) {
     margin-block-end: 80px;
   }
@@ -337,9 +339,54 @@ img:not(:last-child) {
     object-position: center;
     object-fit: cover;
     inline-size: 100%;
+    block-size: 100%;
   }
 
   .footer {
     padding: 20px;
+  }
+
+  .footer::before,
+  .header::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+  }
+
+  .footer::after,
+  .header::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .what {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+  }
+
+  .what .content-title {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+    margin-block-end: 0;
+  }
+
+  .what .content-title span:not(:last-child) {
+    display: inline;
+  }
+
+  .what .content-paragraph {
+    margin-block-end: 0;
   }
 }
