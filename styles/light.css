@@ -31,6 +31,12 @@
   --button-active-border-color: var(--secondary-color);
 }
 
+@media (width >= 1024px) {
+  .theme_light .tagline {
+    --tagline-shadow-color: #ff0070;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --primary-color: #fff1f7;
@@ -63,5 +69,11 @@
     --button-hover-outline-color: rgba(50, 49, 45, 0.4);
     --button-focus-underline-color: var(--secondary-color);
     --button-active-border-color: var(--secondary-color);
+  }
+
+  @media (width >= 1024px) {
+    .tagline {
+      --tagline-shadow-color: #ff0070;
+    }
   }
 }

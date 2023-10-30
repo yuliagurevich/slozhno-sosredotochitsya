@@ -1,7 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: var(--font, sans-serif);
   font-size: var(--font-size);
   line-height: var(--line-height);
@@ -15,7 +12,7 @@
 
 .header {
   block-size: 100vh;
-  padding: 10px;
+  padding: var(--padding-small);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto 1fr;
@@ -26,10 +23,12 @@
 .decoration {
   position: absolute;
   color: var(--decoration-color);
-  inset-inline-end: calc(10px + (25px - 9px) / 2);
-  inset-block-start: 10px;
+  inset-inline-end: calc(
+    var(--inset-small) + (var(--corner-size) - var(--point-size)) / 2
+  );
+  inset-block-start: var(--inset-small);
   display: var(--rec-decoration-display);
-  gap: 10px;
+  gap: var(--gap-small);
   align-items: center;
 }
 
@@ -41,8 +40,8 @@
 .decoration::after {
   content: "";
   display: block;
-  inline-size: 9px;
-  block-size: 9px;
+  inline-size: var(--point-size);
+  block-size: var(--point-size);
   border-radius: 50%;
   background-color: var(--decoration-color);
   box-shadow: 0 0 4px 4px var(--decoration-color);
@@ -56,7 +55,7 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--gap-small);
 }
 
 .header__theme-menu-button {
@@ -93,8 +92,8 @@
 }
 
 .content-container {
-  padding-inline-start: 10px;
-  padding-inline-end: 10px;
+  padding-inline-start: var(--padding-small);
+  padding-inline-end: var(--padding-small);
 }
 
 .content-container:not(:last-child) {
@@ -113,7 +112,7 @@
   line-height: 0.825;
 }
 
-.header-title {
+.header__title {
   color: var(--header-title-color);
   background-color: var(--header-title-background-color);
   font-size: var(--header-title-font-size);
@@ -121,7 +120,7 @@
   align-self: center;
 }
 
-.header-title span {
+.header__title-span {
   display: block;
 }
 
@@ -130,7 +129,11 @@
   background-color: var(--content-title-background-color);
   font-size: var(--content-title-font-size);
   font-weight: var(--content-title-font-weight);
-  margin-block-end: 20px;
+  margin-block-end: var(--margin-big);
+}
+
+.content-article:not(:last-child) {
+  margin-block-end: var(--margin-big);
 }
 
 .content-subtitle {
@@ -138,58 +141,60 @@
   background-color: var(--content-subtitle-background-color);
   font-size: var(--content-subtitle-font-size);
   font-weight: var(--content-subtitle-font-weight);
-  margin-block-end: 10px;
+  margin-block-end: var(--margin-small);
 }
 
-/* .content > .content-container:last-child > .content-subtitle {
-  margin-block-start: 50px;
-} */
+.how .content-subtitle {
+  margin-block-end: var(--margin-big);
+}
 
 .content-paragraph {
   color: var(--content-color);
   background-color: var(--content-background-color);
-  margin-block-end: 20px;
 }
 
-.content-paragraph a {
+.link {
   text-decoration: none;
   text-shadow: 2px 2px 0px var(--tagline-shadow-color);
 }
 
-.content-paragraph a:hover {
+.link:hover {
   border-block-end: 1px solid var(--secondary-color);
 }
 
-.content-paragraph a:focus {
+.link:focus {
   outline: none;
 }
 
-.content-paragraph a:focus-visible {
+.link:focus-visible {
   outline: 1px solid var(--secondary-color);
   outline-offset: 0px;
+}
+
+.list-item:not(:last-child) {
+  margin-block-end: var(--margin-big);
 }
 
 .emphesized {
   color: var(--emphesized-content-color);
   background-color: var(--emphesized-content-background-color);
   font-weight: var(--emphesized-content-font-weight);
-  margin-block-start: 20px;
-  margin-block-end: 10px;
+  margin-block-end: var(--margin-small);
 }
 
-img {
+.image {
   display: block;
   inline-size: 100%;
 }
 
-img:not(:last-child) {
-  margin-block-end: 10px;
+.image :not(:last-child) {
+  margin-block-end: var(--margin-small);
 }
 
 .footer {
   block-size: 100vh;
   margin-block-start: 40px;
-  padding: 10px;
+  padding: var(--padding-small);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -208,49 +213,49 @@ img:not(:last-child) {
   content: "";
   display: block;
   position: absolute;
-  height: 25px;
-  width: 25px;
+  height: var(--corner-size);
+  width: var(--corner-size);
 }
 
 .footer::before,
 .header::before {
   border-inline-end: 1px solid var(--decoration-color);
   border-block-start: 1px solid var(--decoration-color);
-  inset-inline-end: 10px;
-  inset-block-start: 10px;
+  inset-inline-end: var(--inset-small);
+  inset-block-start: var(--inset-small);
 }
 
 .footer::after,
 .header::after {
   border-inline-start: 1px solid var(--decoration-color);
   border-block-end: 1px solid var(--decoration-color);
-  inset-inline-start: 10px;
-  inset-block-end: 10px;
+  inset-inline-start: var(--inset-small);
+  inset-block-end: var(--inset-small);
 }
 
 @media (width >= 768px) {
   .header {
-    padding: 20px;
+    padding: var(--padding-big);
     margin-block-end: 60px;
   }
 
   .decoration {
     inset-inline-end: calc(20px + (25px - 9px) / 2);
-    inset-block-start: 20px;
+    inset-block-start: var(--inset-big);
   }
 
   .header-tagline {
-    margin-inline-start: -20px;
+    margin-inline-start: calc(0px - var(--padding-big));
   }
 
-  .header-title {
+  .header__title {
     inline-size: 50%;
     justify-self: end;
   }
 
   .content-container {
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
+    padding-inline-start: var(--padding-big);
+    padding-inline-end: var(--padding-big);
   }
 
   .content-container:not(:last-child) {
@@ -259,29 +264,31 @@ img:not(:last-child) {
 
   .why {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 20px;
+    gap: var(--gap-big);
   }
 
   .why .content-title {
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
-  }
-
-  .why .content-paragraph {
     margin-block-end: 0;
   }
 
-  .content-title span {
-    display: block;
+  .why .content-article {
+    grid-column: 2 / span 2;
+    margin-block-end: 0;
+  }
+
+  .what .content-title {
+    inline-size: calc((100% - var(--gap-big) * 3) / 3);
   }
 
   .how {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    gap: 20px;
+    gap: var(--gap-big);
   }
 
   .how .content-title {
@@ -289,7 +296,8 @@ img:not(:last-child) {
     grid-row: 1 / span 1;
   }
 
-  .how .content-paragraph:last-child {
+  .how .content-article {
+    grid-column: 2 / span 2;
     margin-block-end: 0;
   }
 
@@ -297,7 +305,7 @@ img:not(:last-child) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, fit-content);
-    gap: 20px;
+    gap: var(--gap-big);
   }
 
   .pictures .content-subtitle {
@@ -343,19 +351,19 @@ img:not(:last-child) {
   }
 
   .footer {
-    padding: 20px;
+    padding: var(--padding-big);
   }
 
   .footer::before,
   .header::before {
-    inset-inline-end: 20px;
-    inset-block-start: 20px;
+    inset-inline-end: var(--inset-big);
+    inset-block-start: var(--inset-big);
   }
 
   .footer::after,
   .header::after {
-    inset-inline-start: 20px;
-    inset-block-end: 20px;
+    inset-inline-start: var(--inset-big);
+    inset-block-end: var(--inset-big);
   }
 }
 
@@ -373,7 +381,7 @@ img:not(:last-child) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, auto);
-    gap: 20px;
+    gap: var(--gap-big);
   }
 
   .what .content-title {

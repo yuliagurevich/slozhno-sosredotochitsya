@@ -1,15 +1,15 @@
 .page.theme_dark {
   --primary-color: #000028;
-  --secondary-color: #F1B2CE;
-  --accent-color: #FF0070;
-  
+  --secondary-color: #f1b2ce;
+  --accent-color: #ff0070;
+
   --background-color: var(--primary-color);
   --background-image: url(../images/cover-image-dark.png);
-  
+
   --decoration-color: var(--accent-color);
   --rec-decoration-display: flex;
-  
-  --tagline-color: #DB00FF;
+
+  --tagline-color: #db00ff;
   --tagline-shadow-color: var(--accent-color);
 
   --header-title-color: var(--background-color);
@@ -26,7 +26,7 @@
   --emphesized-content-background-color: var(--accent-color);
 
   --button-text-color: var(--accent-color);
-  --button-hover-outline-color: rgba(255, 0, 112, 0.40);
+  --button-hover-outline-color: rgba(255, 0, 112, 0.4);
   --button-focus-underline-color: var(--accent-color);
   --button-active-border-color: var(--accent-color);
 }
