@@ -6,57 +6,45 @@
 :root {
   --primary-color: #000028;
   --secondary-color: #f1b2ce;
-  --accent-color: #ff0070; /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
+  --accent-color: #ff0070;
 
   --font: "IBM Plex mono";
   --font-size: 18px;
   --line-height: 1.3;
+  --font-weight: 400;
 
   --background-color: var(--primary-color);
   --background-image: url(../images/cover-image-dark.png);
 
   --decoration-color: var(--accent-color);
+  --decoration-line-height: 138.889%;
   --rec-decoration-display: flex;
 
   --decorative-color: #db00ff;
   --decorative-shadow-color: var(--accent-color);
-  --decorative-font: var(--font);
   --decorative-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --decorative-font-weight: bold;
 
-  --header-title-color: var(--background-color);
-  --header-title-background-color: var(--accent-color);
-  --header-title-font: var(--font);
-  --header-title-font-size: var(--font-size);
-  --header-title-font-weight: bold;
+  --header-subtitle-color: var(--primary-color);
+  --header-subtitle-background-color: var(--accent-color);
+  --header-subtitle-font-weight: bold;
 
   --content-title-color: var(--accent-color);
-  --content-title-background-color: transparent;
-  --content-title-font: var(--font);
-  --content-title-font-size: var(--font-size);
-  --content-title-font-weight: bold;
+  --content-title-font-size: inherit;
 
   --content-subtitle-color: var(--primary-color);
   --content-subtitle-background-color: var(--accent-color);
-  --content-subtitle-font: var(--font);
-  --content-subtitle-font-size: var(--font-size);
-  --content-subtitle-font-weight: bold;
+  --content-subtitle-font-size: inherit;
 
   --content-color: var(--secondary-color);
-  --content-background-color: transparent;
-  --content-font: var(--font);
-  --content-font-size: var(--font-size);
-  --content-font-weight: normal;
 
   --link-shadow-color: var(--accent-color);
 
   --list-title-content-color: var(--primary-color);
   --list-title-content-background-color: var(--accent-color);
-  --list-title-content-font-weight: normal;
 
   --button-text-color: var(--accent-color);
   --button-hover-outline-color: rgba(255, 0, 112, 0.4);
-  --button-focus-underline-color: var(--accent-color); /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
+  --button-focus-underline-color: var(--accent-color);
   --button-active-border-color: var(--accent-color);
 
   --padding-small: 10px;

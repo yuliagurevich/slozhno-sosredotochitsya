@@ -1,7 +1,7 @@
 .page.theme_dark {
   --primary-color: #000028;
   --secondary-color: #f1b2ce;
-  --accent-color: #ff0070; /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
+  --accent-color: #ff0070;
 
   --background-color: var(--primary-color);
   --background-image: url(../images/cover-image-dark.png);
@@ -12,8 +12,8 @@
   --decorative-color: #db00ff;
   --decorative-shadow-color: var(--accent-color);
 
-  --header-title-color: var(--background-color);
-  --header-title-background-color: var(--accent-color);
+  --header-subtitle-color: var(--primary-color);
+  --header-subtitle-background-color: var(--accent-color);
 
   --content-title-color: var(--accent-color);
 
@@ -29,6 +29,6 @@
 
   --button-text-color: var(--accent-color);
   --button-hover-outline-color: rgba(255, 0, 112, 0.4);
-  --button-focus-underline-color: var(--accent-color); /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
+  --button-focus-underline-color: var(--accent-color);
   --button-active-border-color: var(--accent-color);
 }

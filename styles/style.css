@@ -1,7 +1,8 @@
 .page {
-  font-family: var(--font, sans-serif);
+  font-family: var(--font, monospace);
   font-size: var(--font-size);
   line-height: var(--line-height);
+  font-weight: var(--font-weight);
   background-color: var(--background-color);
   background-image: var(--background-image);
   background-size: cover;
@@ -18,6 +19,7 @@
   grid-template-rows: 1fr auto 1fr;
   position: relative;
   margin-block-end: 40px;
+  min-block-size: 668px;
 }
 
 .decoration {
@@ -33,8 +35,8 @@
 }
 
 .decoration::before {
-  content: "rec";
-  text-transform: uppercase;
+  content: "REC";
+  line-height: var(--decoration-line-height);
 }
 
 .decoration::after {
@@ -44,7 +46,7 @@
   block-size: var(--point-size);
   border-radius: 50%;
   background-color: var(--decoration-color);
-  box-shadow: 0 0 4px 4px var(--decoration-color);
+  box-shadow: 0 0 4px 2px var(--decoration-color);
 }
 
 .header__theme-menu {
@@ -94,7 +96,6 @@
 .decorated {
   color: var(--decorative-color);
   font-size: var(--decorative-font-size);
-  font-weight: var(--decorative-font-weight);
   align-self: center;
 }
 
@@ -104,10 +105,9 @@
 }
 
 .header-subtitle {
-  color: var(--header-title-color);
-  background-color: var(--header-title-background-color);
-  font-size: var(--header-title-font-size);
-  font-weight: var(--header-title-font-weight);
+  color: var(--header-subtitle-color);
+  background-color: var(--header-subtitle-background-color);
+  font-weight: var(--header-subtitle-font-weight);
   align-self: center;
 }
 
@@ -126,9 +126,7 @@
 
 .content-title {
   color: var(--content-title-color);
-  background-color: var(--content-title-background-color);
   font-size: var(--content-title-font-size);
-  font-weight: var(--content-title-font-weight);
   margin-block-end: var(--margin-big);
 }
 
@@ -144,17 +142,15 @@
   color: var(--content-subtitle-color);
   background-color: var(--content-subtitle-background-color);
   font-size: var(--content-subtitle-font-size);
-  font-weight: var(--content-subtitle-font-weight);
   margin-block-end: var(--margin-small);
 }
 
 .content-paragraph {
   color: var(--content-color);
-  background-color: var(--content-background-color);
 }
 
 .content-paragraph:not(:last-child) {
-  margin-block-end: var(--margin-small); /* Если добавятся еще параграфы */
+  margin-block-end: var(--margin-small);
 }
 
 .link {
@@ -186,7 +182,6 @@
 .list-title {
   color: var(--list-title-content-color);
   background-color: var(--list-title-content-background-color);
-  font-weight: var(--list-title-content-font-weight);
   margin-block-end: var(--margin-small);
 }
 
@@ -200,6 +195,7 @@
 }
 
 .footer {
+  min-block-size: 668px;
   block-size: 100vh;
   margin-block-start: 40px;
   padding: var(--padding-small);
@@ -214,10 +210,8 @@
   text-shadow: 2px 2px 0px var(--decorative-shadow-color);
 }
 
-.footer::before,
-.footer::after,
-.header::before,
-.header::after {
+.decorated-zone::before,
+.decorated-zone::after {
   content: "";
   display: block;
   position: absolute;
@@ -225,16 +219,14 @@
   width: var(--corner-size);
 }
 
-.footer::before,
-.header::before {
+.decorated-zone::before {
   border-inline-end: 1px solid var(--decoration-color);
   border-block-start: 1px solid var(--decoration-color);
   inset-inline-end: var(--inset-small);
   inset-block-start: var(--inset-small);
 }
 
-.footer::after,
-.header::after {
+.decorated-zone::after {
   border-inline-start: 1px solid var(--decoration-color);
   border-block-end: 1px solid var(--decoration-color);
   inset-inline-start: var(--inset-small);
@@ -364,14 +356,12 @@
     margin-block-start: 60px;
   }
 
-  .footer::before,
-  .header::before {
+  .decorated-zone::before {
     inset-inline-end: var(--inset-big);
     inset-block-start: var(--inset-big);
   }
 
-  .footer::after,
-  .header::after {
+  .decorated-zone::after {
     inset-inline-start: var(--inset-big);
     inset-block-end: var(--inset-big);
   }
@@ -406,10 +396,6 @@
     grid-column: 1 / -1;
     grid-row: 1 / span 1;
     margin-block-end: 0;
-  }
-
-  .what .content-title span:not(:last-child) {
-    display: inline;
   }
 
   .how {

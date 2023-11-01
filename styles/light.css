@@ -1,6 +1,6 @@
 .page.theme_light {
   --primary-color: #fff1f7;
-  --secondary-color: #353430; /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
+  --secondary-color: #353430;
   --accent-color: #ff8dcb;
 
   --background-color: var(--primary-color);
@@ -12,8 +12,8 @@
   --decorative-color: #ffc2e6;
   --decorative-shadow-color: var(--accent-color);
 
-  --header-title-color: var(--secondary-color);
-  --header-title-background-color: var(--accent-color);
+  --header-subtitle-color: var(--secondary-color);
+  --header-subtitle-background-color: var(--accent-color);
 
   --content-title-color: var(--secondary-color);
 
@@ -29,7 +29,7 @@
 
   --button-text-color: var(--secondary-color);
   --button-hover-outline-color: rgba(50, 49, 45, 0.4);
-  --button-focus-underline-color: var(--secondary-color); /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
+  --button-focus-underline-color: var(--secondary-color);
   --button-active-border-color: var(--secondary-color);
 }
 
@@ -54,8 +54,8 @@
     --decorative-color: #ffc2e6;
     --decorative-shadow-color: var(--accent-color);
 
-    --header-title-color: var(--secondary-color);
-    --header-title-background-color: var(--accent-color);
+    --header-subtitle-color: var(--secondary-color);
+    --header-subtitle-background-color: var(--accent-color);
 
     --content-title-color: var(--secondary-color);
 
@@ -71,7 +71,7 @@
 
     --button-text-color: var(--secondary-color);
     --button-hover-outline-color: rgba(50, 49, 45, 0.4);
-    --button-focus-underline-color: var(--secondary-color); /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
+    --button-focus-underline-color: var(--secondary-color);
     --button-active-border-color: var(--secondary-color);
   }
 
