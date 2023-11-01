@@ -24,8 +24,8 @@
   
   --link-shadow-color: var(--accent-color);
 
-  --emphesized-content-color: var(--secondary-color);
-  --emphesized-content-background-color: var(--accent-color);
+  --list-title-content-color: var(--secondary-color);
+  --list-title-content-background-color: var(--accent-color);
 
   --button-text-color: var(--secondary-color);
   --button-hover-outline-color: rgba(50, 49, 45, 0.4);
@@ -66,8 +66,8 @@
     
     --link-shadow-color: var(--accent-color);
 
-    --emphesized-content-color: var(--secondary-color);
-    --emphesized-content-background-color: var(--accent-color);
+    --list-title-content-color: var(--secondary-color);
+    --list-title-content-background-color: var(--accent-color);
 
     --button-text-color: var(--secondary-color);
     --button-hover-outline-color: rgba(50, 49, 45, 0.4);

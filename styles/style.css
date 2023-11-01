@@ -183,10 +183,10 @@
   margin-block-end: var(--margin-big);
 }
 
-.emphesized {
-  color: var(--emphesized-content-color);
-  background-color: var(--emphesized-content-background-color);
-  font-weight: var(--emphesized-content-font-weight);
+.list-title {
+  color: var(--list-title-content-color);
+  background-color: var(--list-title-content-background-color);
+  font-weight: var(--list-title-content-font-weight);
   margin-block-end: var(--margin-small);
 }
 

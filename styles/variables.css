@@ -50,9 +50,9 @@
 
   --link-shadow-color: var(--accent-color);
 
-  --emphesized-content-color: var(--primary-color);
-  --emphesized-content-background-color: var(--accent-color);
-  --emphesized-content-font-weight: normal;
+  --list-title-content-color: var(--primary-color);
+  --list-title-content-background-color: var(--accent-color);
+  --list-title-content-font-weight: normal;
 
   --button-text-color: var(--accent-color);
   --button-hover-outline-color: rgba(255, 0, 112, 0.4);
