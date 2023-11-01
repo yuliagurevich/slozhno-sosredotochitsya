@@ -246,7 +246,7 @@
     inset-block-start: var(--inset-big);
   }
 
-  .header .decorated {
+  .header-title {
     margin-inline-start: calc(0px - var(--padding-big));
   }
 

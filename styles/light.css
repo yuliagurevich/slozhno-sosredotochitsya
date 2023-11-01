@@ -34,7 +34,8 @@
 }
 
 @media (width >= 1024px) {
-  .theme_light .decorated {
+  .theme_light .header-title,
+  .theme_light .footer-decorated-text {
     --decorative-shadow-color: #ff0070;
   }
 }
@@ -76,7 +77,8 @@
   }
 
   @media (width >= 1024px) {
-    .decorated {
+    .header-title,
+    .footer-decorated-text {
       --decorative-shadow-color: #ff0070;
     }
   }
