@@ -18,11 +18,11 @@
   --decoration-color: var(--accent-color);
   --rec-decoration-display: flex;
 
-  --tagline-color: #db00ff;
-  --tagline-shadow-color: var(--accent-color);
-  --tagline-font: var(--font);
-  --tagline-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --tagline-font-weight: bold;
+  --decorative-color: #db00ff;
+  --decorative-shadow-color: var(--accent-color);
+  --decorative-font: var(--font);
+  --decorative-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --decorative-font-weight: bold;
 
   --header-title-color: var(--background-color);
   --header-title-background-color: var(--accent-color);
@@ -48,6 +48,8 @@
   --content-font-size: var(--font-size);
   --content-font-weight: normal;
 
+  --link-shadow-color: var(--accent-color);
+
   --emphesized-content-color: var(--primary-color);
   --emphesized-content-background-color: var(--accent-color);
   --emphesized-content-font-weight: normal;
@@ -72,6 +74,6 @@
 
 @media (width >= 768px) {
   :root {
-    --tagline-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --decorative-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }

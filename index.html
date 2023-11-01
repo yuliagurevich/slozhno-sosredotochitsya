@@ -18,7 +18,7 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <div class="decoration" aria-hidden="true"></div>
+      <span class="decoration" aria-hidden="true"></span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -45,15 +45,15 @@
           </li>
         </ul>
       </nav>
-      <p class="tagline header-tagline">no focus</p>
-      <h1 class="header__title">
-        <span class="header__title-span"
+      <h1 class="decorated">no focus</h1>
+      <p class="header-subtitle">
+        <span class="header-subtitle-span"
           >Что делать, когда не можешь делать ничего</span
-        ><span class="header__title-span"
+        ><span class="header-subtitle-span"
           >Или почему нам так сложно сконцентрироваться, особенно когда очень
           надо</span
         >
-      </h1>
+      </p>
     </header>
     <main class="content">
       <section class="content-container why">
@@ -233,10 +233,15 @@
             alt="Улочка в городе"
           />
         </article>
-      </section>      
+      </section>
     </main>
     <footer class="footer">
-      <p class="tagline footer-tagline">focus</p>
+      <!-- Согласно определению, заголовок - это обозначение структурной части основного текста произведения: раздела, главы, параграфа, таблицы и т.д.
+
+           Синтаксис заголовка не применен, так как футер не имеет никакого содержания, которое могло бы быть озаглавлено.
+           Внешний вид текста делает его декоративным, но не меняет его семантику.
+      -->
+      <p class="decorated">focus</p>
     </footer>
     <script src="./scripts/script.js"></script>
   </body>

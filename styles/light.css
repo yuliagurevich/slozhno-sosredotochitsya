@@ -9,8 +9,8 @@
   --decoration-color: var(--secondary-color);
   --rec-decoration-display: none;
 
-  --tagline-color: #ffc2e6;
-  --tagline-shadow-color: var(--accent-color);
+  --decorative-color: #ffc2e6;
+  --decorative-shadow-color: var(--accent-color);
 
   --header-title-color: var(--secondary-color);
   --header-title-background-color: var(--accent-color);
@@ -21,6 +21,8 @@
   --content-subtitle-background-color: var(--accent-color);
 
   --content-color: var(--secondary-color);
+  
+  --link-shadow-color: var(--accent-color);
 
   --emphesized-content-color: var(--secondary-color);
   --emphesized-content-background-color: var(--accent-color);
@@ -32,8 +34,8 @@
 }
 
 @media (width >= 1024px) {
-  .theme_light .tagline {
-    --tagline-shadow-color: #ff0070;
+  .theme_light .decorated {
+    --decorative-shadow-color: #ff0070;
   }
 }
 
@@ -49,8 +51,8 @@
     --decoration-color: var(--secondary-color);
     --rec-decoration-display: none;
 
-    --tagline-color: #ffc2e6;
-    --tagline-shadow-color: var(--accent-color);
+    --decorative-color: #ffc2e6;
+    --decorative-shadow-color: var(--accent-color);
 
     --header-title-color: var(--secondary-color);
     --header-title-background-color: var(--accent-color);
@@ -61,6 +63,8 @@
     --content-subtitle-background-color: var(--accent-color);
 
     --content-color: var(--secondary-color);
+    
+    --link-shadow-color: var(--accent-color);
 
     --emphesized-content-color: var(--secondary-color);
     --emphesized-content-background-color: var(--accent-color);
@@ -72,8 +76,8 @@
   }
 
   @media (width >= 1024px) {
-    .tagline {
-      --tagline-shadow-color: #ff0070;
+    .decorated {
+      --decorative-shadow-color: #ff0070;
     }
   }
 }
