@@ -1,6 +1,6 @@
 .page.theme_light {
   --primary-color: #fff1f7;
-  --secondary-color: #353430;
+  --secondary-color: #353430; /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
   --accent-color: #ff8dcb;
 
   --background-color: var(--primary-color);
@@ -27,7 +27,7 @@
 
   --button-text-color: var(--secondary-color);
   --button-hover-outline-color: rgba(50, 49, 45, 0.4);
-  --button-focus-underline-color: var(--secondary-color);
+  --button-focus-underline-color: var(--secondary-color); /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
   --button-active-border-color: var(--secondary-color);
 }
 
@@ -67,7 +67,7 @@
 
     --button-text-color: var(--secondary-color);
     --button-hover-outline-color: rgba(50, 49, 45, 0.4);
-    --button-focus-underline-color: var(--secondary-color);
+    --button-focus-underline-color: var(--secondary-color); /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
     --button-active-border-color: var(--secondary-color);
   }
 

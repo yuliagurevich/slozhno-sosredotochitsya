@@ -6,7 +6,7 @@
 :root {
   --primary-color: #000028;
   --secondary-color: #f1b2ce;
-  --accent-color: #ff0070;
+  --accent-color: #ff0070; /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
 
   --font: "IBM Plex mono";
   --font-size: 18px;
@@ -54,7 +54,7 @@
 
   --button-text-color: var(--accent-color);
   --button-hover-outline-color: rgba(255, 0, 112, 0.4);
-  --button-focus-underline-color: var(--accent-color);
+  --button-focus-underline-color: var(--accent-color); /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
   --button-active-border-color: var(--accent-color);
 
   --padding-small: 10px;

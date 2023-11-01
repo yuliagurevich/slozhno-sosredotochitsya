@@ -79,7 +79,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: 1px solid var(--button-focus-underline-color);
+  border-block-end: 1px solid var(--button-focus-underline-color); /* Цвет подчеркивания в состоянии :focus-visible не прозрачный */
 }
 
 .header__theme-menu-button_active {
@@ -136,6 +136,10 @@
   margin-block-end: var(--margin-big);
 }
 
+.how .content-article:not(:last-child) {
+  margin-block-end: 50px;
+}
+
 .content-subtitle {
   color: var(--content-subtitle-color);
   background-color: var(--content-subtitle-background-color);
@@ -144,13 +148,13 @@
   margin-block-end: var(--margin-small);
 }
 
-.how .content-subtitle {
-  margin-block-end: var(--margin-big);
-}
-
 .content-paragraph {
   color: var(--content-color);
   background-color: var(--content-background-color);
+}
+
+.content-paragraph:not(:last-child) {
+  margin-block-end: var(--margin-small); /* Если добавятся еще параграфы */
 }
 
 .link {
@@ -169,6 +173,10 @@
 .link:focus-visible {
   outline: 1px solid var(--secondary-color);
   outline-offset: 0px;
+}
+
+.how .content-article:nth-child(2) .content-subtitle {
+  margin-block-end: var(--margin-big);
 }
 
 .list-item:not(:last-child) {
@@ -286,8 +294,8 @@
   .how {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-    gap: var(--gap-big);
+    grid-template-rows: repeat(2, auto);
+    gap: 80px var(--gap-big);
   }
 
   .how .content-title {
@@ -295,18 +303,22 @@
     grid-row: 1 / span 1;
   }
 
-  .how .content-article {
+  .how .content-article:nth-child(2) {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
     margin-block-end: 0;
   }
 
-  .pictures {
+  .how .content-article:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, fit-content);
     gap: var(--gap-big);
   }
 
-  .pictures .content-subtitle {
+  .how .content-article:nth-child(3) .content-subtitle {
     grid-column: 1 / span 3;
     grid-row: 1 / span 1;
     margin-block-end: 0;
@@ -400,15 +412,15 @@
     display: inline;
   }
 
-  .what .content-paragraph {
-    margin-block-end: 0;
-  }
-
   .how {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .how .content-article {
+  .how .content-article:nth-child(2) {
     grid-column: 2 / span 2;
+  }
+
+  .how .content-article:nth-child(3) {
+    grid-column: 1 / span 3;
   }
 }
