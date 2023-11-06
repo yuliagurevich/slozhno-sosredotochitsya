@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
     <title>Сложно сосредоточиться</title>
-    <link rel="icon" href="./images/favicon.ico" sizes="any" />
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/dark.css" />
-    <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/dark.css">
+    <link rel="stylesheet" href="./styles/light.css">
   </head>
   <body class="page">
     <header class="header decorated-zone">
@@ -129,19 +129,12 @@
         </article>
       </section>
       <section class="content-container how">
-        <h2 class="content-title">
-          Как концентрироваться лучше, чем золотая рыбка (то&nbsp;есть дольше трёх
-          секунд)
-        </h2>
+        <h2 class="content-title">Как концентрироваться лучше, чем золотая рыбка (то&nbsp;есть дольше трёх секунд)</h2>
         <article class="content-article">
-          <h3 class="content-subtitle">
-            5&nbsp;простых (на&nbsp;самом деле не&nbsp;очень) советов
-          </h3>
+          <h3 class="content-subtitle">5&nbsp;простых (на&nbsp;самом деле не&nbsp;очень) советов</h3>
           <ul>
             <li class="list-item">
-              <h4 class="list-title">
-                Представьте небо и&nbsp;облака
-              </h4>
+              <h4 class="list-title">Представьте небо и&nbsp;облака</h4>
               <p class="content-paragraph">
                 Или листья в ручье. Тут дело в лёгкой медитации, которая
                 помогает успокоиться. Ведь часто именно тревожные мысли о
@@ -200,46 +193,108 @@
             </li>
           </ul>
         </article>
+        <!-- Хотя в макете дизайнер использовал для раздела иллюстраций отдельную секцию, из содержания статьи видно,
+          что 5 картинок раздела "А можно в картинках?" иллюстрируют 5 пунктов раздела "5 простых (на самом деле не очень) советов"
+          и являются частью раздела "Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)":
+
+          1. Представьте небо и облака - "./images/sunset.png"
+          2. Включите музыку - "./images/tape.png"
+          3. Прогуляйтесь - "./images/street.png"
+          4. Хорошо ешьте - "./images/ice-cream.png"
+          5. Читайте - "./images/books.png"
+          
+          Структура заголовков предложенной для верстки статьи, исходя из ее содержания:
+
+          1. Почему сосредоточиться так сложно
+            а. Многозадачность
+            б. Дофамин
+          2. Что снижает концентрацию внимания?
+            а. Многозадачность
+            б. Еда
+            в. Гаджеты
+          3. Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
+            а. 5 простых (на самом деле не очень) советов
+            б. А можно в картинках?
+          
+          Дизайнер вправе выбирать структуру своего дизайн-проекта, опираясь на доступные ему инструменты и методы работы с ними
+          (Figma не единственный такой инструмент), но обязан сохранить в дизайне логическую структуру контента.
+          Поэтому раздел "А можно в картинках?" озаглавлен заголовком, дизайн которого характеризуется жирным начертанием и цветным фоном
+          и характерен для всех заголовков вложенных разделов.
+
+          Верстальщик не обязан воспроизводить в верстке структуру дизайн-проекта, но так же, как и дизайнер, обязан сохранить в верстке
+          логическую структуру контента. Поэтому раздел "Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)"
+          сверстан тегом <section> c соответствующим заголовком <h2> и двумя вложенными разделами, оформленными тегами <article>
+          c соответсвующими заголовками <h3>. Нестандартные отступы подзаголовков и разделов реализованы средствами CSS.
+          
+          Использованные в верстке страницы элементы в случае необходимости возможно переиспользовать на различных уровнях:
+          1) <section> с вложенным заголовком <h2>;
+          2) <article> с вложенным заголовком <h3>;
+          3) отдельный элемент <section> как обертку;
+          4) отдельный заголовок <h2>;
+          5) отдельный элемент <article> как обертку;
+          6) отдельный заголовок <h3>.
+
+          Большое спасибо за интересную дискуссию.
+        -->
         <article class="content-article">
           <h3 class="content-subtitle">А&nbsp;можно в&nbsp;картинках?</h3>
           <img
             class="image"
             src="./images/sunset.png"
             loading="lazy"
-            alt="Закат над горами"
-          />
+            alt="Представьте небо и облака: закат над горами и морем"
+          >
           <img
             class="image"
             src="./images/ice-cream.png"
             loading="lazy"
-            alt="Шарики мороженого"
-          />
+            alt="Хорошо ешьте и избегайте быстрых углеводов: шарики мороженого"
+          >
           <img
             class="image"
             src="./images/tape.png"
             loading="lazy"
-            alt="Аудио-кассета"
-          />
+            alt="Включите музыку: аудио-кассета"
+          >
           <img
             class="image"
             src="./images/books.png"
             loading="lazy"
-            alt="Стопка книг"
-          />
+            alt="Читайте: стопка книг"
+          >
           <img
             class="image"
             src="./images/street.png"
             loading="lazy"
-            alt="Улочка в городе"
-          />
+            alt="Прогуляйтесь: улочка в городе"
+          >
         </article>
-      </section>
+      </section>      
     </main>
     <footer class="footer decorated-zone">
-      <!-- Синтаксис заголовка не применен, так как футер не имеет никакого текста
-           или содержания другого вида, которое могло бы быть озаглавлено.
-           Внешний вид текста делает его декоративным, но не меняет его семантику. -->
-      <p class="footer-decorated-text">focus</p>
+      <!-- Если в футере появится какой-то контент и потребуется добавить на страницу навигацию
+        по разделам сайта, можно использовать тег навигации в сочетании с атрибутом aria-labelledby.
+        В этом случае ярлыком рекомендуется использовать заголовок соответствующего раздела, если он есть.
+        Пример:
+
+        <nav aria-labelledby="footerheading">
+          <h2 id="footerheading">focus</h2>
+          <ul>
+            <li><a href="#">Представьте небо и облака</a></li>
+            <li><a href="#">Включите музыку</a></li>
+            <li><a href="#">Прогуляйтесь</a></li>
+            ...
+          </ul>
+        </nav>
+        
+        Задача навигации по разделам в ТЗ не поставлена. Согласно макету, футер не содержит никакого контента,
+        кроме текста "focus". Заголовок без контента в футере может сбить с толку незрячих пользователей.
+        Несмотря на свое визуальное сходство в заголовком страницы, текст в футере оформлен параграфом.
+
+        Большое спасибо за ссылки и примеры. Обязательно использую эти приемы в следующих проектах там,
+        где это будет уместно.
+      -->
+      <p class="footer-decorated-text" lang="en">focus</p>
     </footer>
     <script src="./scripts/script.js"></script>
   </body>
